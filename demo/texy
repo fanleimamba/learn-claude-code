@@ -1,0 +1,26 @@
+
+可以，给你最稳妥的 mac 升级命令（推荐 nvm）：
+方案A（推荐，便于切换版本）
+1. 安装 nvm
+2. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+3. 让 zsh 生效
+4. source ~/.zshrc
+5. 安装并切换 Node 20（或18）
+6. nvm install 20
+7. nvm use 20
+8. nvm alias default 20
+如需18：
+nvm install 18
+nvm use 18
+nvm alias default 18
+1. 验证
+2. node -v
+3. npm -v
+4. 启用 pnpm（corepack）
+5. corepack enable
+6. corepack prepare pnpm@9.12.1 --activate
+7. pnpm -v
+8. 回到项目执行
+9. cd /Users/fanlei19
+10. pnpm i
+11. pnpm h5:dev
